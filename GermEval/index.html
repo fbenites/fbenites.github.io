@@ -1149,10 +1149,10 @@ h6:hover .anchor-link {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Twistbytes-Approach-to-Hierarchical-Classification-shared-Task-at-GermEval-2019">Twistbytes Approach to Hierarchical Classification shared Task at GermEval 2019<a class="anchor-link" href="#Twistbytes-Approach-to-Hierarchical-Classification-shared-Task-at-GermEval-2019">&#182;</a></h1><p>We explain here, step by step, how to reproduce results of the approach and discuss parts of the paper. The approach was aimed at building a strong baseline for the task, which should be beaten by deep learning approaches, but we did not achieve that, so we submitted this baseline, and got second in the flat problem and 1st in the hierarchical task (subtask B). This baseline builds on strong placements in different shared tasks, and although it only is a clever way for keyword spotting, it performs a very good job.</p>
-<h2 id="Task-Description">Task Description<a class="anchor-link" href="#Task-Description">&#182;</a></h2><p>The task was basically to classify blurbs (small summaries/advertarial texts/?) into 8 classes (subtask A) or to hierarchical structutured 343 labels. There were 11638 samples in the training set, 2910 in the development and 4157 in the test set. There are some indicators that the developement and test set were similar to the training data, as the average number of labels were similar (3.1). See <a href="https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc/gest19-1-description.pdf">https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc/gest19-1-description.pdf</a> for a detailed description. The task is not especially useful for real applications, but one can see what can be performed by hierarchical classifiers for document classification even with few texts and a large number of labels on German text.</p>
+<h1 id="Twistbytes-Approach-to-Hierarchical-Classification-shared-Task-at-GermEval-2019">Twistbytes Approach to Hierarchical Classification shared Task at GermEval 2019<a class="anchor-link" href="#Twistbytes-Approach-to-Hierarchical-Classification-shared-Task-at-GermEval-2019">&#182;</a></h1><p>We explain here, step by step, how to reproduce results of the approach and discuss parts of the <a href="https://arxiv.org/abs/1908.06493">paper</a>. The approach was aimed at building a strong baseline for the task, which should be beaten by deep learning approaches, but we did not achieve that, so we submitted this baseline, and got second in the flat problem and 1st in the hierarchical task (subtask B). This baseline builds on strong placements in different shared tasks, and although it only is a clever way for keyword spotting, it performs a very good job.</p>
+<h2 id="Task-Description">Task Description<a class="anchor-link" href="#Task-Description">&#182;</a></h2><p>The task was basically to classify blurbs (small summaries/advertarial texts/?) into 8 classes (subtask A) or into hierarchical structutured 343 labels (subtask B). There were 11638 samples in the training set, 2910 in the development and 4157 in the test set. There are some indicators that the developement and test set were similar to the training data, as the average number of labels were similar (3.1). See <a href="https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc/gest19-1-description.pdf">https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc/gest19-1-description.pdf</a> for a (very) detailed description of the task. The task is not especially useful for real applications, but one can see what can be performed by hierarchical classifiers for document classification even with few texts and a large number of labels on German text. Still, a future application would be that a publishing house receive a book, create the blurb, classify it automatically and put online.</p>
 <h2 id="Literature">Literature<a class="anchor-link" href="#Literature">&#182;</a></h2><p>Please see the detailed Task description for a general Literature. For the model, we were inspired by the architecture from <a href="https://www.researchgate.net/publication/316602155_MAZA_Submissions_to_VarDial_2017">https://www.researchgate.net/publication/316602155_MAZA_Submissions_to_VarDial_2017</a> .
-Also check out the our approach used in VarDial 2018: <a href="https://blog.zhaw.ch/datascience/twist-bytes-vardial-2018/">https://blog.zhaw.ch/datascience/twist-bytes-vardial-2018/</a></p>
+Also check out the our approach which shaped this approach used in VarDial 2018: <a href="https://blog.zhaw.ch/datascience/twist-bytes-vardial-2018/">https://blog.zhaw.ch/datascience/twist-bytes-vardial-2018/</a></p>
 
 </div>
 </div>
@@ -1161,8 +1161,7 @@ Also check out the our approach used in VarDial 2018: <a href="https://blog.zhaw
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Approach">Approach<a class="anchor-link" href="#Approach">&#182;</a></h1><p>First, we load the libraries (we need to install also the sklearn from my fork).
-We discuss here the hierarchical approach (Subtask B), to solve the 343 labels problem. The root node solution is similar but has more ngrams and higher number of maximum features.</p>
-
+We discuss here the hierarchical approach (Subtask B), to solve the 343 labels problem. The root node solution is similar but has more ngrams and higher number of maximum features. We go step by step in a jupyter session over the code.</p>
 </div>
 </div>
 </div>
@@ -1212,7 +1211,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We now introduce the build feature extractor. It uses many TfidfVectorizer for different n-grams (1-7 and 1-3 with German stopwords removal, and 2-3 char n-gram) to create a count matrix (Tf=&gt; Term frequency) and weight the matrix with the inverse document frequency (idf). This creates a matrix which gives high weights/values for n-grams which occur in specific documents, and penalizes words that occur often (no document specificity). A further note, we changed here from the competition the values from 2-5 used in the submitted predictions, to 1-7 which gives a plus of 0.002 f-1 micro score.</p>
+<p>We now introduce the build feature extractor. It uses many <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html">TfidfVectorizers</a> for different n-grams (1-7 and 1-3 with German stopwords removal, and 2-3 char n-gram) to create a count matrix (Tf=&gt; Term frequency) and weight the matrix with the inverse document frequency (idf). This creates a matrix which gives high weights/values for n-grams which occur in specific documents, and penalizes words that occur often (no document specificity). A further note, we changed here from the competition the values from 2-5 used in the submitted predictions, to 1-7 which gives a plus of 0.002 f-1 micro score. The FeatureUnion construct allows us to glue every thing in a big matrix, so the sklearn-like classifier can process it in one run.</p>
 
 </div>
 </div>
@@ -1286,7 +1285,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We create a function to nice print the results</p>
+<p>We create a function to nice print the results for uploading to the competition website:</p>
 
 </div>
 </div>
@@ -1386,7 +1385,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Then we transform the labels and divide train and test set. Here we differentiate between the training and the test set, since they depend on different data chunks.</p>
+<p>Then, we transform the labels and divide train and test set. Here, we differentiate between the training and the test set blocks, since they depend on different data chunks.</p>
 
 </div>
 </div>
@@ -1428,7 +1427,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We now initialize the classification pipeline. First the vectorizer, then a liner SVM in a one vs rest manner. This we glue together in a pipeline creating a base classifier. The pipeline ensures that the result of the vectorizer is given as input to the classifier. We then call the hierarchical classifier with this base classifier. The selection of algorithm lcn and training_strategy siblings makes that the base classifier is trained in each node so that it decides which child of the parent is likely to be predicted.</p>
+<p>We now initialize the classification pipeline. First the vectorizer, then a liner SVM in a one vs rest manner. This we glue together in a pipeline creating a base classifier. The pipeline ensures that the result of the vectorizer is given as input to the classifier. For subtask A we could just use this base classifier (using more ngrams would be helpful, though) and set the right y-labels. For subtask B, we call the hierarchical classifier with this as base classifier. The selection of algorithm lcn and training_strategy siblings makes that the base classifier is trained in each node so that it decides which child of the parent is likely to be predicted.</p>
 
 </div>
 </div>
@@ -1529,8 +1528,8 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>The point of the approach was also to set a right threshold.
-We show the curve by changing the threshold:</p>
+<p>However, what gave us the edge was to set a very good threshold. First, we need to post-process the predictions of the SVM-hierarchical classifier.
+</p>
 
 </div>
 </div>
@@ -1559,7 +1558,8 @@ We show the curve by changing the threshold:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Now we choose a good threshold. Lets see how the graph was for the development set, if we change the threshold.</p>
+  <p>
+    Now we choose a good threshold. Lets see how the graph was for the development set, if we change the threshold.</p>
 
 </div>
 </div>
@@ -1618,7 +1618,7 @@ We show the curve by changing the threshold:</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that the f1-score is almost convex and the top is around -0.2. We can chose -0.25 because it seemed more stable on the right side of the top.</p>
+<p>We can see that the f1-score is almost convex and the top is around -0.2. We can chose -0.25 because it seemed more stable on the right side of the top. Using the standard threshold at 0 would give only 0.65 instead of 0.67 (0.02 was a lot in this competition).</p>
 
 </div>
 </div>
@@ -2073,6 +2073,10 @@ weighted avg       0.67      0.65      0.64      9034
 </div>
 </div>
 </div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We thank the organizers of the GermEval 2019 Task 1 shared task, it was a fun competition.</p>
+
+</div>
 
 
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
@@ -2106,12 +2110,13 @@ weighted avg       0.67      0.65      0.64      9034
 
                 <div class="clear"></div>
 
-                <div class="info">
+<!--                <div class="info">
                     <a href="/germeval-2019-twistbytes.html">posted at 20:00</a>
                     &nbsp;&middot;&nbsp;<a href="/category/posts.html" rel="tag">posts</a>
                     &nbsp;&middot;
                     &nbsp;<a href="/tag/python-firsts.html" class="tags">python firsts</a>
                 </div>
+-->
             </article>
 
             <div class="clear"></div>
