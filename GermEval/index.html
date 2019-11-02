@@ -1,0 +1,2139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>GermEval 2019 Twistbytes</title>
+    <link rel="shortcut icon" type="image/png" href="/favicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/theme/css/screen.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="/theme/css/print.css" type="text/css" media="print" />
+    <meta name="generator" content="Pelican" />
+    <meta name="description" content="" />
+    <meta name="author" content="Fernando Benites" />
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="selected"><a href="/">Home</a></li>
+            </ul>
+        </nav>
+        <div class="header_box">
+            <h1><a href="/">GermEval 2019 Twistbytes</a></h1>
+        </div>
+    </header>
+    <div id="wrapper">
+        <div id="content">            <h4 class="date">Nov 01, 2019</h4>
+
+            <article class="post">
+                <h2 class="title">
+                    <a href="/germeval-2019-twistbytes.html" rel="bookmark" title="Permanent Link to &quot;GermEval 2019 Twistbytes&quot;">GermEval 2019 Twistbytes</a>
+                </h2>
+
+                
+                
+
+                <style type="text/css">/*!
+*
+* IPython notebook
+*
+*/
+/* CSS font colors for translated ANSI escape sequences */
+/* The color values are a mix of
+   http://www.xcolors.net/dl/baskerville-ivorylight and
+   http://www.xcolors.net/dl/euphrasia */
+.ansi-black-fg {
+  color: #3E424D;
+}
+.ansi-black-bg {
+  background-color: #3E424D;
+}
+.ansi-black-intense-fg {
+  color: #282C36;
+}
+.ansi-black-intense-bg {
+  background-color: #282C36;
+}
+.ansi-red-fg {
+  color: #E75C58;
+}
+.ansi-red-bg {
+  background-color: #E75C58;
+}
+.ansi-red-intense-fg {
+  color: #B22B31;
+}
+.ansi-red-intense-bg {
+  background-color: #B22B31;
+}
+.ansi-green-fg {
+  color: #00A250;
+}
+.ansi-green-bg {
+  background-color: #00A250;
+}
+.ansi-green-intense-fg {
+  color: #007427;
+}
+.ansi-green-intense-bg {
+  background-color: #007427;
+}
+.ansi-yellow-fg {
+  color: #DDB62B;
+}
+.ansi-yellow-bg {
+  background-color: #DDB62B;
+}
+.ansi-yellow-intense-fg {
+  color: #B27D12;
+}
+.ansi-yellow-intense-bg {
+  background-color: #B27D12;
+}
+.ansi-blue-fg {
+  color: #208FFB;
+}
+.ansi-blue-bg {
+  background-color: #208FFB;
+}
+.ansi-blue-intense-fg {
+  color: #0065CA;
+}
+.ansi-blue-intense-bg {
+  background-color: #0065CA;
+}
+.ansi-magenta-fg {
+  color: #D160C4;
+}
+.ansi-magenta-bg {
+  background-color: #D160C4;
+}
+.ansi-magenta-intense-fg {
+  color: #A03196;
+}
+.ansi-magenta-intense-bg {
+  background-color: #A03196;
+}
+.ansi-cyan-fg {
+  color: #60C6C8;
+}
+.ansi-cyan-bg {
+  background-color: #60C6C8;
+}
+.ansi-cyan-intense-fg {
+  color: #258F8F;
+}
+.ansi-cyan-intense-bg {
+  background-color: #258F8F;
+}
+.ansi-white-fg {
+  color: #C5C1B4;
+}
+.ansi-white-bg {
+  background-color: #C5C1B4;
+}
+.ansi-white-intense-fg {
+  color: #A1A6B2;
+}
+.ansi-white-intense-bg {
+  background-color: #A1A6B2;
+}
+.ansi-default-inverse-fg {
+  color: #FFFFFF;
+}
+.ansi-default-inverse-bg {
+  background-color: #000000;
+}
+.ansi-bold {
+  font-weight: bold;
+}
+.ansi-underline {
+  text-decoration: underline;
+}
+/* The following styles are deprecated an will be removed in a future version */
+.ansibold {
+  font-weight: bold;
+}
+.ansi-inverse {
+  outline: 0.5px dotted;
+}
+/* use dark versions for foreground, to improve visibility */
+.ansiblack {
+  color: black;
+}
+.ansired {
+  color: darkred;
+}
+.ansigreen {
+  color: darkgreen;
+}
+.ansiyellow {
+  color: #c4a000;
+}
+.ansiblue {
+  color: darkblue;
+}
+.ansipurple {
+  color: darkviolet;
+}
+.ansicyan {
+  color: steelblue;
+}
+.ansigray {
+  color: gray;
+}
+/* and light for background, for the same reason */
+.ansibgblack {
+  background-color: black;
+}
+.ansibgred {
+  background-color: red;
+}
+.ansibggreen {
+  background-color: green;
+}
+.ansibgyellow {
+  background-color: yellow;
+}
+.ansibgblue {
+  background-color: blue;
+}
+.ansibgpurple {
+  background-color: magenta;
+}
+.ansibgcyan {
+  background-color: cyan;
+}
+.ansibggray {
+  background-color: gray;
+}
+div.cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-radius: 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  width: 100%;
+  padding: 5px;
+  /* This acts as a spacer between cells, that is outside the border */
+  margin: 0px;
+  outline: none;
+  position: relative;
+  overflow: visible;
+}
+div.cell:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: transparent;
+}
+div.cell.jupyter-soft-selected {
+  border-left-color: #E3F2FD;
+  border-left-width: 1px;
+  padding-left: 5px;
+  border-right-color: #E3F2FD;
+  border-right-width: 1px;
+  background: #E3F2FD;
+}
+@media print {
+  div.cell.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+div.cell.selected,
+div.cell.selected.jupyter-soft-selected {
+  border-color: #ababab;
+}
+div.cell.selected:before,
+div.cell.selected.jupyter-soft-selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #42A5F5;
+}
+@media print {
+  div.cell.selected,
+  div.cell.selected.jupyter-soft-selected {
+    border-color: transparent;
+  }
+}
+.edit_mode div.cell.selected {
+  border-color: #66BB6A;
+}
+.edit_mode div.cell.selected:before {
+  position: absolute;
+  display: block;
+  top: -1px;
+  left: -1px;
+  width: 5px;
+  height: calc(100% +  2px);
+  content: '';
+  background: #66BB6A;
+}
+@media print {
+  .edit_mode div.cell.selected {
+    border-color: transparent;
+  }
+}
+.prompt {
+  /* This needs to be wide enough for 3 digit prompt numbers: In[100]: */
+  min-width: 14ex;
+  /* This padding is tuned to match the padding on the CodeMirror editor. */
+  padding: 0.4em;
+  margin: 0px;
+  font-family: monospace;
+  text-align: right;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+  /* Don't highlight prompt number selection */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Use default cursor */
+  cursor: default;
+}
+@media (max-width: 540px) {
+  .prompt {
+    text-align: left;
+  }
+}
+div.inner_cell {
+  min-width: 0;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_area {
+  border: 1px solid #cfcfcf;
+  border-radius: 2px;
+  background: #f7f7f7;
+  line-height: 1.21429em;
+}
+/* This is needed so that empty prompt areas can collapse to zero height when there
+   is no content in the output_subarea and the prompt. The main purpose of this is
+   to make sure that empty JavaScript output_subareas have no height. */
+div.prompt:empty {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+div.unrecognized_cell {
+  padding: 5px 5px 5px 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.unrecognized_cell .inner_cell {
+  border-radius: 2px;
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+  border: 1px solid #cfcfcf;
+  background: #eaeaea;
+}
+div.unrecognized_cell .inner_cell a {
+  color: inherit;
+  text-decoration: none;
+}
+div.unrecognized_cell .inner_cell a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+@media (max-width: 540px) {
+  div.unrecognized_cell > div.prompt {
+    display: none;
+  }
+}
+div.code_cell {
+  /* avoid page breaking on code cells when printing */
+}
+@media print {
+  div.code_cell {
+    page-break-inside: avoid;
+  }
+}
+/* any special styling for code cells that are currently running goes here */
+div.input {
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.input {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+/* input_area and input_prompt must match in top border and margin for alignment */
+div.input_prompt {
+  color: #303F9F;
+  border-top: 1px solid transparent;
+}
+div.input_area > div.highlight {
+  margin: 0.4em;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+div.input_area > div.highlight > pre {
+  margin: 0px;
+  border: none;
+  padding: 0px;
+  background-color: transparent;
+}
+/* The following gets added to the <head> if it is detected that the user has a
+ * monospace font with inconsistent normal/bold/italic height.  See
+ * notebookmain.js.  Such fonts will have keywords vertically offset with
+ * respect to the rest of the text.  The user should select a better font.
+ * See: https://github.com/ipython/ipython/issues/1503
+ *
+ * .CodeMirror span {
+ *      vertical-align: bottom;
+ * }
+ */
+.CodeMirror {
+  line-height: 1.21429em;
+  /* Changed from 1em to our global default */
+  font-size: 14px;
+  height: auto;
+  /* Changed to auto to autogrow */
+  background: none;
+  /* Changed from white to allow our bg to show through */
+}
+.CodeMirror-scroll {
+  /*  The CodeMirror docs are a bit fuzzy on if overflow-y should be hidden or visible.*/
+  /*  We have found that if it is visible, vertical scrollbars appear with font size changes.*/
+  overflow-y: hidden;
+  overflow-x: auto;
+}
+.CodeMirror-lines {
+  /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
+  /* we have set a different line-height and want this to scale with that. */
+  /* Note that this should set vertical padding only, since CodeMirror assumes
+       that horizontal padding will be set on CodeMirror pre */
+  padding: 0.4em 0;
+}
+.CodeMirror-linenumber {
+  padding: 0 8px 0 4px;
+}
+.CodeMirror-gutters {
+  border-bottom-left-radius: 2px;
+  border-top-left-radius: 2px;
+}
+.CodeMirror pre {
+  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
+    use .CodeMirror-lines for vertical */
+  padding: 0 0.4em;
+  border: 0;
+  border-radius: 0;
+}
+.CodeMirror-cursor {
+  border-left: 1.4px solid black;
+}
+@media screen and (min-width: 2138px) and (max-width: 4319px) {
+  .CodeMirror-cursor {
+    border-left: 2px solid black;
+  }
+}
+@media screen and (min-width: 4320px) {
+  .CodeMirror-cursor {
+    border-left: 4px solid black;
+  }
+}
+/*
+
+Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiacs.Org>
+Adapted from GitHub theme
+
+*/
+.highlight-base {
+  color: #000;
+}
+.highlight-variable {
+  color: #000;
+}
+.highlight-variable-2 {
+  color: #1a1a1a;
+}
+.highlight-variable-3 {
+  color: #333333;
+}
+.highlight-string {
+  color: #BA2121;
+}
+.highlight-comment {
+  color: #408080;
+  font-style: italic;
+}
+.highlight-number {
+  color: #080;
+}
+.highlight-atom {
+  color: #88F;
+}
+.highlight-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.highlight-builtin {
+  color: #008000;
+}
+.highlight-error {
+  color: #f00;
+}
+.highlight-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.highlight-meta {
+  color: #AA22FF;
+}
+/* previously not defined, copying from default codemirror */
+.highlight-def {
+  color: #00f;
+}
+.highlight-string-2 {
+  color: #f50;
+}
+.highlight-qualifier {
+  color: #555;
+}
+.highlight-bracket {
+  color: #997;
+}
+.highlight-tag {
+  color: #170;
+}
+.highlight-attribute {
+  color: #00c;
+}
+.highlight-header {
+  color: blue;
+}
+.highlight-quote {
+  color: #090;
+}
+.highlight-link {
+  color: #00c;
+}
+/* apply the same style to codemirror */
+.cm-s-ipython span.cm-keyword {
+  color: #008000;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-atom {
+  color: #88F;
+}
+.cm-s-ipython span.cm-number {
+  color: #080;
+}
+.cm-s-ipython span.cm-def {
+  color: #00f;
+}
+.cm-s-ipython span.cm-variable {
+  color: #000;
+}
+.cm-s-ipython span.cm-operator {
+  color: #AA22FF;
+  font-weight: bold;
+}
+.cm-s-ipython span.cm-variable-2 {
+  color: #1a1a1a;
+}
+.cm-s-ipython span.cm-variable-3 {
+  color: #333333;
+}
+.cm-s-ipython span.cm-comment {
+  color: #408080;
+  font-style: italic;
+}
+.cm-s-ipython span.cm-string {
+  color: #BA2121;
+}
+.cm-s-ipython span.cm-string-2 {
+  color: #f50;
+}
+.cm-s-ipython span.cm-meta {
+  color: #AA22FF;
+}
+.cm-s-ipython span.cm-qualifier {
+  color: #555;
+}
+.cm-s-ipython span.cm-builtin {
+  color: #008000;
+}
+.cm-s-ipython span.cm-bracket {
+  color: #997;
+}
+.cm-s-ipython span.cm-tag {
+  color: #170;
+}
+.cm-s-ipython span.cm-attribute {
+  color: #00c;
+}
+.cm-s-ipython span.cm-header {
+  color: blue;
+}
+.cm-s-ipython span.cm-quote {
+  color: #090;
+}
+.cm-s-ipython span.cm-link {
+  color: #00c;
+}
+.cm-s-ipython span.cm-error {
+  color: #f00;
+}
+.cm-s-ipython span.cm-tab {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAMCAYAAAAkuj5RAAAAAXNSR0IArs4c6QAAAGFJREFUSMft1LsRQFAQheHPowAKoACx3IgEKtaEHujDjORSgWTH/ZOdnZOcM/sgk/kFFWY0qV8foQwS4MKBCS3qR6ixBJvElOobYAtivseIE120FaowJPN75GMu8j/LfMwNjh4HUpwg4LUAAAAASUVORK5CYII=);
+  background-position: right;
+  background-repeat: no-repeat;
+}
+div.output_wrapper {
+  /* this position must be relative to enable descendents to be absolute within it */
+  position: relative;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  z-index: 1;
+}
+/* class for the output area when it should be height-limited */
+div.output_scroll {
+  /* ideally, this would be max-height, but FF barfs all over that */
+  height: 24em;
+  /* FF needs this *and the wrapper* to specify full width, or it will shrinkwrap */
+  width: 100%;
+  overflow: auto;
+  border-radius: 2px;
+  -webkit-box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.8);
+  display: block;
+}
+/* output div while it is collapsed */
+div.output_collapsed {
+  margin: 0px;
+  padding: 0px;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+div.out_prompt_overlay {
+  height: 100%;
+  padding: 0px 0.4em;
+  position: absolute;
+  border-radius: 2px;
+}
+div.out_prompt_overlay:hover {
+  /* use inner shadow to get border that is computed the same on WebKit/FF */
+  -webkit-box-shadow: inset 0 0 1px #000;
+  box-shadow: inset 0 0 1px #000;
+  background: rgba(240, 240, 240, 0.5);
+}
+div.output_prompt {
+  color: #D84315;
+}
+/* This class is the outer container of all output sections. */
+div.output_area {
+  padding: 0px;
+  page-break-inside: avoid;
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+div.output_area .MathJax_Display {
+  text-align: left !important;
+}
+div.output_area 
+div.output_area 
+div.output_area img,
+div.output_area svg {
+  max-width: 100%;
+  height: auto;
+}
+div.output_area img.unconfined,
+div.output_area svg.unconfined {
+  max-width: none;
+}
+div.output_area .mglyph > img {
+  max-width: none;
+}
+/* This is needed to protect the pre formating from global settings such
+   as that of bootstrap */
+.output {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: vertical;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.output_area {
+    /* Old browsers */
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-align: stretch;
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-align: stretch;
+    display: box;
+    box-orient: vertical;
+    box-align: stretch;
+    /* Modern browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+div.output_area pre {
+  margin: 0;
+  padding: 1px 0 1px 0;
+  border: 0;
+  vertical-align: baseline;
+  color: black;
+  background-color: transparent;
+  border-radius: 0;
+}
+/* This class is for the output subarea inside the output_area and after
+   the prompt div. */
+div.output_subarea {
+  overflow-x: auto;
+  padding: 0.4em;
+  /* Old browsers */
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  /* Modern browsers */
+  flex: 1;
+  max-width: calc(100% - 14ex);
+}
+div.output_scroll div.output_subarea {
+  overflow-x: visible;
+}
+/* The rest of the output_* classes are for special styling of the different
+   output types */
+/* all text output has this class: */
+div.output_text {
+  text-align: left;
+  color: #000;
+  /* This has to match that of the the CodeMirror class line-height below */
+  line-height: 1.21429em;
+}
+/* stdout/stderr are 'text' as well as 'stream', but execute_result/error are *not* streams */
+div.output_stderr {
+  background: #fdd;
+  /* very light red background for stderr */
+}
+div.output_latex {
+  text-align: left;
+}
+/* Empty output_javascript divs should have no height */
+div.output_javascript:empty {
+  padding: 0;
+}
+.js-error {
+  color: darkred;
+}
+/* raw_input styles */
+div.raw_input_container {
+  line-height: 1.21429em;
+  padding-top: 5px;
+}
+pre.raw_input_prompt {
+  /* nothing needed here. */
+}
+input.raw_input {
+  font-family: monospace;
+  font-size: inherit;
+  color: inherit;
+  width: auto;
+  /* make sure input baseline aligns with prompt */
+  vertical-align: baseline;
+  /* padding + margin = 0.5em between prompt and cursor */
+  padding: 0em 0.25em;
+  margin: 0em 0.25em;
+}
+input.raw_input:focus {
+  box-shadow: none;
+}
+p.p-space {
+  margin-bottom: 10px;
+}
+div.output_unrecognized {
+  padding: 5px;
+  font-weight: bold;
+  color: red;
+}
+div.output_unrecognized a {
+  color: inherit;
+  text-decoration: none;
+}
+div.output_unrecognized a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+.rendered_html {
+  color: #000;
+  /* any extras will just be numbers: */
+}
+
+
+
+.rendered_html :link {
+  text-decoration: underline;
+}
+.rendered_html :visited {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+.rendered_html h1:first-child {
+  margin-top: 0.538em;
+}
+.rendered_html h2:first-child {
+  margin-top: 0.636em;
+}
+.rendered_html h3:first-child {
+  margin-top: 0.777em;
+}
+.rendered_html h4:first-child {
+  margin-top: 1em;
+}
+.rendered_html h5:first-child {
+  margin-top: 1em;
+}
+.rendered_html h6:first-child {
+  margin-top: 1em;
+}
+.rendered_html ul:not(.list-inline),
+.rendered_html ol:not(.list-inline) {
+  padding-left: 2em;
+}
+
+
+
+
+
+
+
+
+.rendered_html * + ul {
+  margin-top: 1em;
+}
+.rendered_html * + ol {
+  margin-top: 1em;
+}
+
+
+
+
+
+.rendered_html pre,
+
+
+
+
+.rendered_html tr,
+.rendered_html th,
+
+
+.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+.rendered_html * + table {
+  margin-top: 1em;
+}
+
+.rendered_html * + p {
+  margin-top: 1em;
+}
+
+.rendered_html * + img {
+  margin-top: 1em;
+}
+.rendered_html img,
+
+.rendered_html img.unconfined,
+
+
+.rendered_html * + .alert {
+  margin-top: 1em;
+}
+[dir="rtl"] 
+div.text_cell {
+  /* Old browsers */
+  display: -webkit-box;
+  -webkit-box-orient: horizontal;
+  -webkit-box-align: stretch;
+  display: -moz-box;
+  -moz-box-orient: horizontal;
+  -moz-box-align: stretch;
+  display: box;
+  box-orient: horizontal;
+  box-align: stretch;
+  /* Modern browsers */
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+}
+@media (max-width: 540px) {
+  div.text_cell > div.prompt {
+    display: none;
+  }
+}
+div.text_cell_render {
+  /*font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;*/
+  outline: none;
+  resize: none;
+  width: inherit;
+  border-style: none;
+  padding: 0.5em 0.5em 0.5em 0.4em;
+  color: #000;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+a.anchor-link:link {
+  text-decoration: none;
+  padding: 0px 20px;
+  visibility: hidden;
+}
+h1:hover .anchor-link,
+h2:hover .anchor-link,
+h3:hover .anchor-link,
+h4:hover .anchor-link,
+h5:hover .anchor-link,
+h6:hover .anchor-link {
+  visibility: visible;
+}
+.text_cell.rendered .input_area {
+  display: none;
+}
+.text_cell.rendered 
+.text_cell.rendered .rendered_html tr,
+.text_cell.rendered .rendered_html th,
+.text_cell.rendered 
+.text_cell.unrendered .text_cell_render {
+  display: none;
+}
+.text_cell .dropzone .input_area {
+  border: 2px dashed #bababa;
+  margin: -1px;
+}
+.cm-header-1,
+.cm-header-2,
+.cm-header-3,
+.cm-header-4,
+.cm-header-5,
+.cm-header-6 {
+  font-weight: bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.cm-header-1 {
+  font-size: 185.7%;
+}
+.cm-header-2 {
+  font-size: 157.1%;
+}
+.cm-header-3 {
+  font-size: 128.6%;
+}
+.cm-header-4 {
+  font-size: 110%;
+}
+.cm-header-5 {
+  font-size: 100%;
+  font-style: italic;
+}
+.cm-header-6 {
+  font-size: 100%;
+  font-style: italic;
+}
+</style>
+<style type="text/css">.highlight .hll { background-color: #ffffcc }
+.highlight  { background: #f8f8f8; }
+.highlight .c { color: #408080; font-style: italic } /* Comment */
+.highlight .err { border: 1px solid #FF0000 } /* Error */
+.highlight .k { color: #008000; font-weight: bold } /* Keyword */
+.highlight .o { color: #666666 } /* Operator */
+.highlight .ch { color: #408080; font-style: italic } /* Comment.Hashbang */
+.highlight .cm { color: #408080; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #BC7A00 } /* Comment.Preproc */
+.highlight .cpf { color: #408080; font-style: italic } /* Comment.PreprocFile */
+.highlight .c1 { color: #408080; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #408080; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #A00000 } /* Generic.Deleted */
+.highlight .ge { font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #FF0000 } /* Generic.Error */
+.highlight .gh { color: #000080; font-weight: bold } /* Generic.Heading */
+.highlight .gi { color: #00A000 } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #000080; font-weight: bold } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #800080; font-weight: bold } /* Generic.Subheading */
+.highlight .gt { color: #0044DD } /* Generic.Traceback */
+.highlight .kc { color: #008000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #008000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #008000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #008000 } /* Keyword.Pseudo */
+.highlight .kr { color: #008000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #B00040 } /* Keyword.Type */
+.highlight .m { color: #666666 } /* Literal.Number */
+.highlight .s { color: #BA2121 } /* Literal.String */
+.highlight .na { color: #7D9029 } /* Name.Attribute */
+.highlight .nb { color: #008000 } /* Name.Builtin */
+.highlight .nc { color: #0000FF; font-weight: bold } /* Name.Class */
+.highlight .no { color: #880000 } /* Name.Constant */
+.highlight .nd { color: #AA22FF } /* Name.Decorator */
+.highlight .ni { color: #999999; font-weight: bold } /* Name.Entity */
+.highlight .ne { color: #D2413A; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #0000FF } /* Name.Function */
+.highlight .nl { color: #A0A000 } /* Name.Label */
+.highlight .nn { color: #0000FF; font-weight: bold } /* Name.Namespace */
+.highlight .nt { color: #008000; font-weight: bold } /* Name.Tag */
+.highlight .nv { color: #19177C } /* Name.Variable */
+.highlight .ow { color: #AA22FF; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mb { color: #666666 } /* Literal.Number.Bin */
+.highlight .mf { color: #666666 } /* Literal.Number.Float */
+.highlight .mh { color: #666666 } /* Literal.Number.Hex */
+.highlight .mi { color: #666666 } /* Literal.Number.Integer */
+.highlight .mo { color: #666666 } /* Literal.Number.Oct */
+.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
+.highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
+.highlight .sc { color: #BA2121 } /* Literal.String.Char */
+.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
+.highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
+.highlight .s2 { color: #BA2121 } /* Literal.String.Double */
+.highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
+.highlight .sh { color: #BA2121 } /* Literal.String.Heredoc */
+.highlight .si { color: #BB6688; font-weight: bold } /* Literal.String.Interpol */
+.highlight .sx { color: #008000 } /* Literal.String.Other */
+.highlight .sr { color: #BB6688 } /* Literal.String.Regex */
+.highlight .s1 { color: #BA2121 } /* Literal.String.Single */
+.highlight .ss { color: #19177C } /* Literal.String.Symbol */
+.highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
+.highlight .fm { color: #0000FF } /* Name.Function.Magic */
+.highlight .vc { color: #19177C } /* Name.Variable.Class */
+.highlight .vg { color: #19177C } /* Name.Variable.Global */
+.highlight .vi { color: #19177C } /* Name.Variable.Instance */
+.highlight .vm { color: #19177C } /* Name.Variable.Magic */
+.highlight .il { color: #666666 } /* Literal.Number.Integer.Long */</style><div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Twistbytes-Approach-to-Hierarchical-Classification-shared-Task-at-GermEval-2019">Twistbytes Approach to Hierarchical Classification shared Task at GermEval 2019<a class="anchor-link" href="#Twistbytes-Approach-to-Hierarchical-Classification-shared-Task-at-GermEval-2019">&#182;</a></h1><p>We explain here, step by step, how to reproduce results of the approach and discuss parts of the paper. The approach was aimed at building a strong baseline for the task, which should be beaten by deep learning approaches, but we did not achieve that, so we submitted this baseline, and got second in the flat problem and 1st in the hierarchical task (subtask B). This baseline builds on strong placements in different shared tasks, and although it only is a clever way for keyword spotting, it performs a very good job.</p>
+<h2 id="Task-Description">Task Description<a class="anchor-link" href="#Task-Description">&#182;</a></h2><p>The task was basically to classify blurbs (small summaries/advertarial texts/?) into 8 classes (subtask A) or to hierarchical structutured 343 labels. There were 11638 samples in the training set, 2910 in the development and 4157 in the test set. There are some indicators that the developement and test set were similar to the training data, as the average number of labels were similar (3.1). See <a href="https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc/gest19-1-description.pdf">https://www.inf.uni-hamburg.de/en/inst/ab/lt/resources/data/germeval-2019-hmc/gest19-1-description.pdf</a> for a detailed description. The task is not especially useful for real applications, but one can see what can be performed by hierarchical classifiers for document classification even with few texts and a large number of labels on German text.</p>
+<h2 id="Literature">Literature<a class="anchor-link" href="#Literature">&#182;</a></h2><p>Please see the detailed Task description for a general Literature. For the model, we were inspired by the architecture from <a href="https://www.researchgate.net/publication/316602155_MAZA_Submissions_to_VarDial_2017">https://www.researchgate.net/publication/316602155_MAZA_Submissions_to_VarDial_2017</a> .
+Also check out the our approach used in VarDial 2018: <a href="https://blog.zhaw.ch/datascience/twist-bytes-vardial-2018/">https://blog.zhaw.ch/datascience/twist-bytes-vardial-2018/</a></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Approach">Approach<a class="anchor-link" href="#Approach">&#182;</a></h1><p>First, we load the libraries (we need to install also the sklearn from my fork).
+We discuss here the hierarchical approach (Subtask B), to solve the 343 labels problem. The root node solution is similar but has more ngrams and higher number of maximum features.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="ch">#!/usr/bin/env python</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">GermEval 2019 Hierarchical classification shared task</span>
+<span class="sd">Twistbytes Approach (Fernando Benites)</span>
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">make_pipeline</span>
+
+<span class="c1"># needs the one from pip install git+https://github.com/fbenites/sklearn-hierarchical-classification.git</span>
+<span class="c1">#or the developer branch</span>
+<span class="kn">from</span> <span class="nn">sklearn_hierarchical_classification.classifier</span> <span class="k">import</span> <span class="n">HierarchicalClassifier</span>
+<span class="kn">from</span> <span class="nn">sklearn_hierarchical_classification.constants</span> <span class="k">import</span> <span class="n">ROOT</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.pipeline</span> <span class="k">import</span> <span class="n">Pipeline</span><span class="p">,</span> <span class="n">FeatureUnion</span>
+<span class="kn">from</span> <span class="nn">sklearn.feature_extraction.text</span> <span class="k">import</span> <span class="n">TfidfVectorizer</span>
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">f1_score</span><span class="p">,</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">make_scorer</span>
+<span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
+<span class="kn">from</span> <span class="nn">sklearn</span> <span class="k">import</span> <span class="n">preprocessing</span>
+<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">MultiLabelBinarizer</span>  
+<span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">LinearSVC</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">sklearn.multiclass</span> <span class="k">import</span> <span class="n">OneVsRestClassifier</span>  
+
+<span class="kn">import</span> <span class="nn">nltk</span>
+<span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="c1">#read data utilities</span>
+<span class="kn">from</span> <span class="nn">parse_data</span> <span class="k">import</span> <span class="o">*</span>
+<span class="c1"># Used for seeding random state</span>
+<span class="n">RANDOM_STATE</span> <span class="o">=</span> <span class="mi">42</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We now introduce the build feature extractor. It uses many TfidfVectorizer for different n-grams (1-7 and 1-3 with German stopwords removal, and 2-3 char n-gram) to create a count matrix (Tf=&gt; Term frequency) and weight the matrix with the inverse document frequency (idf). This creates a matrix which gives high weights/values for n-grams which occur in specific documents, and penalizes words that occur often (no document specificity). A further note, we changed here from the competition the values from 2-5 used in the submitted predictions, to 1-7 which gives a plus of 0.002 f-1 micro score.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">build_feature_extractor</span><span class="p">():</span>
+    <span class="n">context_features</span> <span class="o">=</span> <span class="n">FeatureUnion</span><span class="p">(</span>
+        <span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s1">&#39;word&#39;</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">(</span>
+                <span class="n">strip_accents</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">lowercase</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">analyzer</span><span class="o">=</span><span class="s1">&#39;word&#39;</span><span class="p">,</span>
+                <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">),</span>
+                <span class="n">max_df</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                <span class="n">min_df</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                <span class="n">binary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">sublinear_tf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">max_features</span><span class="o">=</span><span class="mi">70000</span>
+            <span class="p">)),</span>
+            <span class="p">(</span><span class="s1">&#39;word3&#39;</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">(</span>
+                <span class="n">strip_accents</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">lowercase</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">analyzer</span><span class="o">=</span><span class="s1">&#39;word&#39;</span><span class="p">,</span>
+                <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="n">max_df</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                <span class="n">min_df</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                <span class="n">binary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">sublinear_tf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">stop_words</span><span class="o">=</span><span class="n">nltk</span><span class="o">.</span><span class="n">corpus</span><span class="o">.</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;german&#39;</span><span class="p">),</span>
+                <span class="n">max_features</span><span class="o">=</span><span class="mi">70000</span>
+            <span class="p">)),</span>
+            <span class="p">(</span><span class="s1">&#39;char&#39;</span><span class="p">,</span> <span class="n">TfidfVectorizer</span><span class="p">(</span>
+                <span class="n">strip_accents</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                <span class="n">lowercase</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">analyzer</span><span class="o">=</span><span class="s1">&#39;char&#39;</span><span class="p">,</span>
+                <span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span>
+                <span class="n">max_df</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span>
+                <span class="n">min_df</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span>
+                <span class="n">binary</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+                <span class="n">use_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">smooth_idf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+                <span class="n">sublinear_tf</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+            <span class="p">)),</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="n">features</span> <span class="o">=</span> <span class="n">FeatureUnion</span><span class="p">(</span>
+        <span class="n">transformer_list</span><span class="o">=</span><span class="p">[</span>
+            <span class="p">(</span><span class="s1">&#39;context&#39;</span><span class="p">,</span> <span class="n">Pipeline</span><span class="p">(</span>
+                <span class="n">steps</span><span class="o">=</span><span class="p">[(</span><span class="s1">&#39;vect&#39;</span><span class="p">,</span> <span class="n">context_features</span><span class="p">)]</span>
+            <span class="p">)),</span>
+        <span class="p">]</span>
+    <span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">features</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We create a function to nice print the results</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">print_results</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span><span class="n">hierarchy</span><span class="p">,</span><span class="n">y_pred</span><span class="p">,</span><span class="n">mlb</span><span class="p">,</span><span class="n">ids</span><span class="p">,</span><span class="n">graph</span><span class="p">):</span>
+    
+        <span class="n">it_hi</span><span class="o">=</span><span class="p">[</span><span class="n">tj</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">hierarchy</span><span class="o">.</span><span class="n">values</span><span class="p">()</span> <span class="k">for</span> <span class="n">tj</span> <span class="ow">in</span> <span class="n">tk</span><span class="p">]</span>
+        <span class="n">roots</span><span class="o">=</span><span class="p">[</span><span class="n">tk</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">hierarchy</span> <span class="k">if</span> <span class="n">tk</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">it_hi</span><span class="p">]</span>
+        <span class="n">prec</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">[</span><span class="n">tk</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">predecessors</span><span class="p">(</span><span class="n">x</span> <span class="p">)]</span><span class="o">+</span> <span class="p">[</span><span class="n">tk</span> <span class="k">for</span> <span class="n">tj</span>  <span class="ow">in</span> <span class="n">graph</span><span class="o">.</span><span class="n">predecessors</span><span class="p">(</span><span class="n">x</span> <span class="p">)</span><span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">prec</span><span class="p">(</span><span class="n">tj</span><span class="p">)]</span>
+        <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="n">fname</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">f1</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">task</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">task</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span>
+                    <span class="n">f1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;subtask_a</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y_pred</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                        <span class="n">f1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ids</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="n">st1</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+                        <span class="n">labs</span><span class="o">=</span><span class="nb">set</span><span class="p">()</span>
+                        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]:</span>
+                            <span class="k">if</span> <span class="n">mlb</span><span class="o">.</span><span class="n">classes_</span><span class="p">[</span><span class="n">j</span><span class="p">]</span> <span class="ow">in</span> <span class="n">roots</span><span class="p">:</span>
+                                <span class="n">st1</span><span class="o">+=</span><span class="n">mlb</span><span class="o">.</span><span class="n">classes_</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">:]</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+                            <span class="k">else</span><span class="p">:</span>
+                                <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">prec</span><span class="p">(</span><span class="n">mlb</span><span class="o">.</span><span class="n">classes_</span><span class="p">[</span><span class="n">j</span><span class="p">]):</span>
+                                    <span class="k">if</span> <span class="n">tk</span><span class="o">==-</span><span class="mi">1</span><span class="p">:</span>
+                                        <span class="k">continue</span>
+                                    <span class="k">if</span> <span class="n">tk</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">==</span><span class="s2">&quot;0&quot;</span><span class="p">:</span>
+                                        <span class="n">labs</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="n">tk</span><span class="p">[</span><span class="mi">2</span><span class="p">:])</span>
+                        <span class="n">f1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">st1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">labs</span><span class="p">)</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="k">if</span> <span class="n">task</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+                    <span class="n">f1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;subtask_b</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+                    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">y_pred</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]):</span>
+                        <span class="n">f1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ids</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span><span class="p">)</span>
+                        <span class="n">st1</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+                        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="n">y_pred</span><span class="p">[</span><span class="n">i</span><span class="p">,:]</span><span class="o">.</span><span class="n">nonzero</span><span class="p">()[</span><span class="mi">0</span><span class="p">]:</span>
+                            <span class="n">st1</span><span class="o">+=</span><span class="n">mlb</span><span class="o">.</span><span class="n">classes_</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="mi">2</span><span class="p">:]</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\t</span><span class="s2">&quot;</span>
+                        <span class="n">f1</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">st1</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To the main part, first we load the data. Important here, the blurbs*.txt are in fact xml, which we load with a helper script. For that we diverge from the original data, by wrapping the content of the files with a root node. This is fixed in the data from my github directory.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">train</span><span class="o">=</span><span class="mi">1</span>
+    
+    <span class="k">if</span> <span class="s2">&quot;data&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="nb">globals</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">train</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">,</span><span class="n">labels</span><span class="o">=</span><span class="n">read_data</span><span class="p">(</span><span class="s2">&quot;blurbs_train.txt&quot;</span><span class="p">)</span>
+            <span class="n">data_dev</span><span class="p">,</span><span class="n">labels_dev</span><span class="o">=</span><span class="n">read_data</span><span class="p">(</span><span class="s2">&quot;blurbs_dev.txt&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">,</span><span class="n">labels</span><span class="o">=</span><span class="n">read_data</span><span class="p">(</span><span class="s2">&quot;blurbs_train_and_dev.txt&quot;</span><span class="p">)</span>
+            <span class="n">data_dev</span><span class="p">,</span><span class="n">labels_dev</span><span class="o">=</span><span class="n">read_data</span><span class="p">(</span><span class="s2">&quot;blurbs_test_nolabel.txt&quot;</span><span class="p">)</span>
+
+        <span class="n">hierarchy</span><span class="p">,</span> <span class="n">levels</span><span class="o">=</span><span class="n">read_hierarchy</span><span class="p">(</span><span class="s2">&quot;hierarchy.txt&quot;</span><span class="p">)</span>
+        
+    <span class="sa">r</span><span class="sd">&quot;&quot;&quot;Test that a nontrivial hierarchy leaf classification behaves as expected.</span>
+<span class="sd">    We build the following class hierarchy along with data from the handwritten digits dataset:</span>
+<span class="sd">            &lt;ROOT&gt;</span>
+<span class="sd">           /      \</span>
+<span class="sd">          A        B</span>
+<span class="sd">         / \       |  \</span>
+<span class="sd">        1   7      C   9</span>
+<span class="sd">                 /   \</span>
+<span class="sd">                3     8</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="s2">&quot;ROOT&quot;</span> <span class="ow">in</span> <span class="n">hierarchy</span><span class="p">:</span>
+        <span class="n">hierarchy</span><span class="p">[</span><span class="n">ROOT</span><span class="p">]</span> <span class="o">=</span> <span class="n">hierarchy</span><span class="p">[</span><span class="s2">&quot;ROOT&quot;</span><span class="p">]</span>
+        <span class="k">del</span> <span class="n">hierarchy</span><span class="p">[</span><span class="s2">&quot;ROOT&quot;</span><span class="p">]</span>
+    <span class="n">class_hierarchy</span> <span class="o">=</span> <span class="n">hierarchy</span>
+
+    <span class="n">keywords</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;title&quot;</span><span class="p">,</span><span class="s2">&quot;authors&quot;</span><span class="p">,</span><span class="s2">&quot;body&quot;</span><span class="p">,</span><span class="s2">&quot;copyright&quot;</span><span class="p">,</span><span class="s2">&quot;isbn&quot;</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Then we transform the labels and divide train and test set. Here we differentiate between the training and the test set, since they depend on different data chunks.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>    <span class="n">mlb</span> <span class="o">=</span> <span class="n">MultiLabelBinarizer</span><span class="p">()</span>
+    
+    <span class="c1">#depending on the mode load different data</span>
+    <span class="k">if</span> <span class="n">train</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="n">data_train</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">tk</span><span class="p">[</span><span class="n">ky</span><span class="p">]</span> <span class="k">for</span> <span class="n">ky</span> <span class="ow">in</span> <span class="n">keywords</span> <span class="k">if</span> <span class="n">tk</span><span class="p">[</span><span class="n">ky</span><span class="p">]</span><span class="o">!=</span><span class="kc">None</span><span class="p">])</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">data</span> <span class="p">]</span>
+
+        <span class="n">labels_train</span><span class="o">=</span><span class="n">mlb</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+        <span class="n">X_train_raw</span><span class="p">,</span> <span class="n">X_dev_raw</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_dev</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">data_train</span><span class="p">,</span><span class="n">labels_train</span><span class="p">,</span><span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">X_train_raw</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">tk</span><span class="p">[</span><span class="n">ky</span><span class="p">]</span> <span class="k">for</span> <span class="n">ky</span> <span class="ow">in</span> <span class="n">keywords</span> <span class="k">if</span> <span class="n">tk</span><span class="p">[</span><span class="n">ky</span><span class="p">]</span><span class="o">!=</span><span class="kc">None</span><span class="p">])</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">data</span> <span class="p">]</span>
+        <span class="n">y_train</span><span class="o">=</span><span class="n">mlb</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+        <span class="n">y_train</span> <span class="o">=</span> <span class="n">mlb</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">labels</span><span class="p">)</span>
+
+        <span class="k">del</span> <span class="n">data</span>
+
+        <span class="n">ids</span><span class="o">=</span> <span class="p">[</span><span class="n">tk</span><span class="p">[</span><span class="s2">&quot;isbn&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">data_dev</span><span class="p">]</span>
+        <span class="n">X_dev_raw</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">tk</span><span class="p">[</span><span class="n">ky</span><span class="p">]</span> <span class="k">for</span> <span class="n">ky</span> <span class="ow">in</span> <span class="n">keywords</span> <span class="k">if</span> <span class="n">tk</span><span class="p">[</span><span class="n">ky</span><span class="p">]</span><span class="o">!=</span><span class="kc">None</span><span class="p">])</span> <span class="k">for</span> <span class="n">tk</span> <span class="ow">in</span> <span class="n">data_dev</span> <span class="p">]</span>
+
+
+                                          
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We now initialize the classification pipeline. First the vectorizer, then a liner SVM in a one vs rest manner. This we glue together in a pipeline creating a base classifier. The pipeline ensures that the result of the vectorizer is given as input to the classifier. We then call the hierarchical classifier with this base classifier. The selection of algorithm lcn and training_strategy siblings makes that the base classifier is trained in each node so that it decides which child of the parent is likely to be predicted.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>    <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">build_feature_extractor</span><span class="p">()</span>
+    <span class="n">bclf</span> <span class="o">=</span> <span class="n">OneVsRestClassifier</span><span class="p">(</span><span class="n">LinearSVC</span><span class="p">())</span>
+
+    <span class="n">base_estimator</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span>
+        <span class="n">vectorizer</span><span class="p">,</span> <span class="n">bclf</span><span class="p">)</span>
+
+    <span class="n">clf</span> <span class="o">=</span> <span class="n">HierarchicalClassifier</span><span class="p">(</span>
+        <span class="n">base_estimator</span><span class="o">=</span><span class="n">base_estimator</span><span class="p">,</span>
+        <span class="n">class_hierarchy</span><span class="o">=</span><span class="n">class_hierarchy</span><span class="p">,</span>
+        <span class="n">algorithm</span><span class="o">=</span><span class="s2">&quot;lcn&quot;</span><span class="p">,</span> <span class="n">training_strategy</span><span class="o">=</span><span class="s2">&quot;siblings&quot;</span><span class="p">,</span>
+        <span class="n">preprocessing</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
+        <span class="n">mlb</span><span class="o">=</span><span class="n">mlb</span><span class="p">,</span>
+        <span class="n">use_decision_function</span><span class="o">=</span><span class="kc">True</span>
+    <span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>To create the training and prediction is really easy:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;training classifier&quot;</span><span class="p">)</span>
+    <span class="n">clf</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train_raw</span><span class="p">,</span> <span class="n">y_train</span><span class="p">[:,:])</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;predicting&quot;</span><span class="p">)</span>
+    <span class="n">y_pred_scores</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict_proba</span><span class="p">(</span><span class="n">X_dev_raw</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>training classifier
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/multiclass.py:76: UserWarning: Label not 8 is present in all training examples.
+  str(classes[c]))
+/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/multiclass.py:76: UserWarning: Label not 9 is present in all training examples.
+  str(classes[c])) .... (lots of warnings, no worries)
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>predicting
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The point of the approach was also to set a right threshold.
+We show the curve by changing the threshold:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>The classifier linearSVC outputs values betwee -1 and 1. But for nodes which did not have any prediction, the hierarchical classifier let it to 0. So first we set every value which is zero to a lower value than -1 (here -10).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred_scores</span><span class="p">[</span><span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">y_pred_scores</span><span class="o">==</span><span class="mi">0</span><span class="p">)]</span><span class="o">=-</span><span class="mi">10</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Now we choose a good threshold. Lets see how the graph was for the development set, if we change the threshold.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">x_graph</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mf">0.8</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="mi">100</span><span class="p">)</span>
+<span class="n">y_graph</span><span class="o">=</span><span class="p">[</span><span class="n">f1_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_dev</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred_scores</span><span class="o">&gt;</span><span class="n">tx</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">)</span> <span class="k">for</span> <span class="n">tx</span> <span class="ow">in</span> <span class="n">x_graph</span><span class="p">]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_graph</span><span class="p">,</span><span class="n">y_graph</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[13]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>[&lt;matplotlib.lines.Line2D at 0x7f8945845cf8&gt;]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_png output_subarea ">
+<img src="data:image/png;base64,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
+"
+>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can see that the f1-score is almost convex and the top is around -0.2. We can chose -0.25 because it seemed more stable on the right side of the top.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred_scores</span><span class="o">&gt;-</span><span class="mf">0.25</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We print it out (if you want you can use train=0 and get the predictions for the final result).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span>    
+    <span class="k">if</span> <span class="n">train</span><span class="o">==</span><span class="mi">1</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1 micro:&#39;</span><span class="p">,</span>
+          <span class="n">f1_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_dev</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;micro&#39;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;f1 macro:&#39;</span><span class="p">,</span>
+          <span class="n">f1_score</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_dev</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">,</span> <span class="n">average</span><span class="o">=</span><span class="s1">&#39;macro&#39;</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="o">=</span><span class="n">y_dev</span><span class="p">,</span> <span class="n">y_pred</span><span class="o">=</span><span class="n">y_pred</span><span class="p">))</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
+        <span class="n">graph</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">(</span><span class="n">hierarchy</span><span class="p">)</span>
+        <span class="n">print_results</span><span class="p">(</span><span class="s2">&quot;submission_baseline.txt&quot;</span><span class="p">,</span><span class="n">hierarchy</span><span class="p">,</span><span class="n">y_pred</span><span class="o">&gt;-</span><span class="mf">0.25</span><span class="p">,</span><span class="n">mlb</span><span class="p">,</span><span class="n">ids</span><span class="p">,</span><span class="n">graph</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>f1 micro: 0.677735500980053
+f1 macro: 0.24667277524584916
+              precision    recall  f1-score   support
+
+           0       1.00      0.72      0.84        32
+           1       0.71      0.80      0.75       138
+           2       0.86      0.69      0.76       112
+           3       0.88      0.85      0.87       412
+           4       0.94      0.77      0.85        22
+           5       0.87      0.98      0.92      1608
+           6       0.79      0.86      0.82       394
+           7       0.70      0.72      0.71       412
+           8       0.62      0.56      0.59        61
+           9       0.57      0.58      0.57       106
+          10       0.00      0.00      0.00        16
+          11       1.00      0.45      0.62        11
+          12       0.00      0.00      0.00         5
+          13       0.56      0.71      0.63        14
+          14       0.00      0.00      0.00         1
+          15       0.60      0.45      0.51        83
+          16       0.00      0.00      0.00         4
+          17       1.00      0.36      0.53        14
+          18       0.00      0.00      0.00         2
+          19       0.63      0.71      0.67        17
+          20       0.47      0.62      0.54       193
+          21       0.81      0.74      0.77        57
+          22       0.50      0.18      0.27        11
+          23       0.92      0.65      0.76        34
+          24       0.00      0.00      0.00         0
+          25       0.88      0.90      0.89        71
+          26       0.33      0.10      0.15        31
+          27       0.82      0.81      0.81       154
+          28       0.78      0.56      0.65        82
+          29       0.85      0.63      0.72        27
+          30       1.00      0.57      0.73         7
+          31       0.70      0.83      0.76       243
+          32       0.80      0.64      0.71        44
+          33       0.00      0.00      0.00         9
+          34       0.64      0.60      0.62        62
+          35       1.00      0.44      0.62         9
+          36       1.00      0.46      0.63        13
+          37       0.00      0.00      0.00         4
+          38       0.74      0.74      0.74        19
+          39       1.00      0.06      0.12        16
+          40       0.77      0.90      0.83        78
+          41       1.00      0.17      0.29         6
+          42       0.00      0.00      0.00         6
+          43       0.00      0.00      0.00         4
+          44       0.89      0.54      0.67        76
+          45       0.00      0.00      0.00        11
+          46       0.93      0.64      0.76        22
+          47       1.00      0.05      0.09        21
+          48       0.62      0.16      0.25        32
+          49       0.52      0.38      0.44        29
+          50       0.67      0.14      0.24        14
+          51       0.79      0.90      0.84       377
+          52       0.86      0.21      0.34        28
+          53       0.80      0.67      0.73        12
+          54       0.50      0.05      0.09        20
+          55       0.89      0.53      0.67        15
+          56       0.58      0.45      0.51        42
+          57       0.00      0.00      0.00        19
+          58       0.52      0.51      0.52       110
+          59       0.57      0.63      0.60       128
+          60       0.00      0.00      0.00        18
+          61       0.80      0.25      0.38        16
+          62       0.00      0.00      0.00         8
+          63       0.00      0.00      0.00         1
+          64       0.00      0.00      0.00         1
+          65       1.00      1.00      1.00         2
+          66       0.00      0.00      0.00         4
+          67       0.86      0.71      0.77        17
+          68       0.20      0.11      0.14         9
+          69       0.33      0.32      0.32        19
+          70       0.70      0.19      0.30        37
+          71       0.33      0.08      0.12        13
+          72       0.59      0.60      0.60       112
+          73       0.62      0.28      0.38        65
+          74       0.00      0.00      0.00        10
+          75       0.74      0.48      0.58        29
+          76       0.00      0.00      0.00         1
+          77       0.00      0.00      0.00         1
+          78       0.00      0.00      0.00         3
+          79       1.00      0.25      0.40         4
+          80       0.00      0.00      0.00         0
+          81       0.93      0.46      0.62        28
+          82       0.61      0.75      0.67       492
+          83       0.92      0.32      0.47        38
+          84       0.75      0.21      0.33        14
+          85       0.27      0.12      0.17        25
+          86       0.00      0.00      0.00         1
+          87       0.00      0.00      0.00         5
+          88       0.43      0.18      0.25        17
+          89       0.93      0.87      0.90       231
+          90       0.60      0.47      0.53        51
+          91       1.00      0.11      0.20         9
+          92       0.67      0.40      0.50         5
+          93       0.75      0.33      0.46         9
+          94       0.78      0.76      0.77        38
+          95       0.45      0.22      0.29        23
+          96       0.82      0.44      0.57        32
+          97       1.00      0.06      0.12        16
+          98       0.00      0.00      0.00        14
+          99       0.67      0.20      0.31        10
+         100       0.80      0.33      0.47        12
+         101       0.00      0.00      0.00         2
+         102       1.00      0.10      0.18        10
+         103       0.00      0.00      0.00         1
+         104       0.00      0.00      0.00         2
+         105       0.85      0.57      0.68        30
+         106       0.00      0.00      0.00         4
+         107       1.00      0.29      0.44         7
+         108       0.00      0.00      0.00         1
+         109       0.60      0.19      0.29        16
+         110       0.38      0.62      0.47        37
+         111       0.86      0.50      0.63        12
+         112       0.00      0.00      0.00         0
+         113       0.00      0.00      0.00         4
+         114       0.00      0.00      0.00         5
+         115       0.00      0.00      0.00         0
+         116       0.00      0.00      0.00         1
+         117       0.00      0.00      0.00         0
+         118       0.00      0.00      0.00         0
+         119       0.00      0.00      0.00         2
+         120       0.00      0.00      0.00         1
+         121       0.71      0.42      0.53        12
+         122       0.00      0.00      0.00         1
+         123       0.00      0.00      0.00         1
+         124       0.00      0.00      0.00         1
+         125       0.00      0.00      0.00         4
+         126       0.32      0.50      0.39        44
+         127       0.00      0.00      0.00         2
+         128       0.00      0.00      0.00         0
+         129       0.00      0.00      0.00         0
+         130       0.00      0.00      0.00         1
+         131       1.00      0.60      0.75         5
+         132       0.00      0.00      0.00         4
+         133       1.00      0.25      0.40         4
+         134       0.45      0.48      0.47        21
+         135       1.00      0.33      0.50         3
+         136       1.00      0.22      0.36         9
+         137       0.00      0.00      0.00         6
+         138       0.15      0.17      0.16        35
+         139       0.00      0.00      0.00         2
+         140       0.00      0.00      0.00         2
+         141       0.00      0.00      0.00         2
+         142       1.00      0.35      0.52        23
+         143       0.75      0.75      0.75         4
+         144       0.00      0.00      0.00        10
+         145       1.00      0.50      0.67         2
+         146       0.22      0.09      0.13        22
+         147       0.37      0.35      0.36        20
+         148       0.00      0.00      0.00         0
+         149       0.00      0.00      0.00         4
+         150       0.00      0.00      0.00         0
+         151       0.67      0.36      0.47        11
+         152       0.20      0.07      0.11        28
+         153       0.00      0.00      0.00         0
+         154       0.00      0.00      0.00         1
+         155       0.00      0.00      0.00        12
+         156       0.00      0.00      0.00         3
+         157       0.00      0.00      0.00         3
+         158       0.00      0.00      0.00         1
+         159       0.00      0.00      0.00         2
+         160       0.00      0.00      0.00         0
+         161       0.00      0.00      0.00         9
+         162       0.83      0.71      0.77         7
+         163       0.00      0.00      0.00         6
+         164       0.00      0.00      0.00         9
+         165       1.00      0.17      0.29         6
+         166       0.67      0.73      0.70        11
+         167       0.94      0.47      0.63        34
+         168       0.40      0.55      0.46        33
+         169       0.00      0.00      0.00         2
+         170       0.67      0.29      0.40         7
+         171       0.00      0.00      0.00         2
+         172       0.00      0.00      0.00         0
+         173       0.00      0.00      0.00         5
+         174       1.00      0.50      0.67         2
+         175       1.00      0.70      0.82        10
+         176       1.00      0.33      0.50         3
+         177       0.00      0.00      0.00         2
+         178       0.33      0.08      0.12        13
+         179       0.00      0.00      0.00         1
+         180       0.32      0.46      0.38        41
+         181       0.44      0.84      0.57        37
+         182       1.00      0.50      0.67         4
+         183       0.00      0.00      0.00         1
+         184       1.00      0.75      0.86         4
+         185       0.00      0.00      0.00         0
+         186       0.29      0.68      0.41        65
+         187       0.00      0.00      0.00         1
+         188       0.00      0.00      0.00         3
+         189       0.00      0.00      0.00         2
+         190       0.00      0.00      0.00         2
+         191       0.00      0.00      0.00         1
+         192       0.00      0.00      0.00         1
+         193       0.75      0.19      0.30        16
+         194       0.00      0.00      0.00         2
+         195       0.59      0.78      0.67        51
+         196       0.71      0.62      0.67        32
+         197       0.00      0.00      0.00         2
+         198       0.67      0.40      0.50        15
+         199       0.00      0.00      0.00         2
+         200       0.00      0.00      0.00         3
+         201       0.24      0.19      0.21        26
+         202       0.00      0.00      0.00         1
+         203       0.50      0.50      0.50         2
+         204       0.00      0.00      0.00         6
+         205       0.00      0.00      0.00         4
+         206       0.00      0.00      0.00         3
+         207       0.00      0.00      0.00         0
+         208       0.00      0.00      0.00         5
+         209       0.00      0.00      0.00        12
+         210       1.00      0.12      0.22         8
+         211       0.00      0.00      0.00         0
+         212       0.48      0.81      0.60        16
+         213       0.00      0.00      0.00         5
+         214       0.00      0.00      0.00         3
+         215       0.62      0.80      0.70        10
+         216       0.00      0.00      0.00         1
+         217       0.00      0.00      0.00         2
+         218       0.00      0.00      0.00         0
+         219       0.00      0.00      0.00         7
+         220       0.00      0.00      0.00         3
+         221       0.00      0.00      0.00         2
+         222       0.69      0.65      0.67        17
+         223       0.83      0.71      0.77         7
+         224       0.45      0.21      0.29        24
+         225       0.00      0.00      0.00         0
+         226       0.67      0.36      0.47        11
+         227       0.29      0.11      0.15        19
+         228       0.67      0.67      0.67         6
+         229       0.00      0.00      0.00         0
+         230       1.00      0.33      0.50         3
+         231       0.00      0.00      0.00         3
+         232       0.67      0.33      0.44        12
+         233       0.00      0.00      0.00         4
+         234       0.00      0.00      0.00         5
+         235       0.00      0.00      0.00         2
+         236       0.00      0.00      0.00         1
+         237       0.00      0.00      0.00         4
+         238       0.55      0.55      0.55        11
+         239       0.00      0.00      0.00         3
+         240       0.00      0.00      0.00         2
+         241       0.00      0.00      0.00         3
+         242       0.00      0.00      0.00         2
+         243       0.00      0.00      0.00         4
+         244       0.00      0.00      0.00         5
+         245       0.00      0.00      0.00         2
+         246       0.00      0.00      0.00         1
+         247       0.00      0.00      0.00         1
+         248       0.57      0.33      0.42        12
+         249       0.00      0.00      0.00         1
+         250       0.50      0.10      0.17        10
+         251       0.17      0.25      0.20         4
+         252       0.00      0.00      0.00         5
+         253       1.00      0.20      0.33         5
+         254       0.50      0.40      0.44        10
+         255       0.00      0.00      0.00         6
+         256       0.00      0.00      0.00         1
+         257       0.00      0.00      0.00         5
+         258       0.00      0.00      0.00         2
+         259       0.25      0.04      0.07        25
+         260       0.80      0.42      0.55        19
+         261       0.00      0.00      0.00         4
+         262       0.00      0.00      0.00         5
+         263       0.00      0.00      0.00        20
+         264       0.00      0.00      0.00         6
+         265       1.00      0.20      0.33        20
+         266       0.00      0.00      0.00         0
+         267       0.00      0.00      0.00        13
+         268       0.60      0.60      0.60         5
+         269       0.00      0.00      0.00         5
+         270       0.93      0.43      0.59        30
+         271       0.00      0.00      0.00         4
+         272       0.00      0.00      0.00         5
+         273       0.00      0.00      0.00         3
+         274       0.21      0.14      0.17        22
+         275       0.50      0.11      0.18         9
+         276       0.00      0.00      0.00        10
+         277       0.24      0.60      0.34        42
+         278       0.00      0.00      0.00         2
+         279       0.33      0.50      0.40         2
+         280       0.00      0.00      0.00         0
+         281       0.83      0.38      0.53        13
+         282       0.00      0.00      0.00         8
+         283       0.00      0.00      0.00        12
+         284       0.58      0.71      0.64        80
+         285       1.00      0.89      0.94         9
+         286       1.00      0.50      0.67         4
+         287       0.00      0.00      0.00         7
+         288       0.00      0.00      0.00         3
+         289       0.00      0.00      0.00         7
+         290       1.00      0.33      0.50         9
+         291       0.00      0.00      0.00         2
+         292       0.00      0.00      0.00         0
+         293       0.00      0.00      0.00         4
+         294       1.00      0.75      0.86         8
+         295       0.00      0.00      0.00        10
+         296       0.32      0.31      0.31        26
+         297       0.00      0.00      0.00        23
+         298       0.52      0.71      0.60        76
+         299       0.80      0.40      0.53        10
+         300       0.00      0.00      0.00         1
+         301       1.00      0.20      0.33        10
+         302       0.00      0.00      0.00         3
+         303       0.50      0.39      0.44        18
+         304       0.00      0.00      0.00         0
+         305       0.00      0.00      0.00         0
+         306       0.00      0.00      0.00         4
+         307       1.00      0.17      0.29         6
+         308       0.00      0.00      0.00         3
+         309       1.00      0.25      0.40         4
+         310       0.00      0.00      0.00         1
+         311       0.00      0.00      0.00         1
+         312       0.00      0.00      0.00         2
+         313       0.60      0.43      0.50         7
+         314       0.00      0.00      0.00         1
+         315       0.00      0.00      0.00         0
+         316       0.00      0.00      0.00         1
+         317       0.66      0.73      0.69        48
+         318       0.00      0.00      0.00         2
+         319       0.00      0.00      0.00         2
+         320       0.00      0.00      0.00         1
+         321       0.00      0.00      0.00         5
+         322       0.00      0.00      0.00         7
+         323       0.00      0.00      0.00         2
+         324       0.00      0.00      0.00         3
+         325       0.00      0.00      0.00         5
+         326       0.00      0.00      0.00         8
+         327       0.00      0.00      0.00         2
+         328       0.00      0.00      0.00         0
+         329       1.00      1.00      1.00         2
+         330       0.00      0.00      0.00         0
+         331       0.00      0.00      0.00         1
+         332       0.67      0.17      0.27        12
+         333       1.00      0.50      0.67         2
+         334       0.00      0.00      0.00         1
+         335       1.00      0.12      0.22         8
+         336       0.00      0.00      0.00         1
+         337       0.00      0.00      0.00         3
+         338       0.50      0.33      0.40         3
+         339       0.67      0.60      0.63        10
+         340       0.00      0.00      0.00         9
+         341       0.00      0.00      0.00         2
+         342       0.62      0.33      0.43        15
+
+   micro avg       0.71      0.65      0.68      9034
+   macro avg       0.34      0.22      0.25      9034
+weighted avg       0.67      0.65      0.64      9034
+ samples avg       0.73      0.71      0.68      9034
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no predicted samples.
+  &#39;precision&#39;, &#39;predicted&#39;, average, warn_for)
+/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/metrics/classification.py:1439: UndefinedMetricWarning: F-score is ill-defined and being set to 0.0 in labels with no true samples.
+  &#39;recall&#39;, &#39;true&#39;, average, warn_for)
+/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples.
+  &#39;precision&#39;, &#39;predicted&#39;, average, warn_for)
+/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/metrics/classification.py:1439: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  &#39;recall&#39;, &#39;true&#39;, average, warn_for)
+/home/fbenites/virtualenvs/germeval/lib/python3.6/site-packages/sklearn/metrics/classification.py:1437: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in samples with no predicted labels.
+  &#39;precision&#39;, &#39;predicted&#39;, average, warn_for)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>At the end in the competition, in the figure below, we see that in this subtask the micro-F1 was linked to recall, since most approaches focused in precision, we could achieve with the threshold strategy the best result.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="./images/SubTaskB_Results.png" width="800" alt="SubTaskB_Results graphic shows that f1 score is correlated with recall"></p>
+
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['$','$'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        " linebreaks: { automatic: true, width: '95% container' }, " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+</script>
+
+                <div class="clear"></div>
+
+                <div class="info">
+                    <a href="/germeval-2019-twistbytes.html">posted at 20:00</a>
+                    &nbsp;&middot;&nbsp;<a href="/category/posts.html" rel="tag">posts</a>
+                    &nbsp;&middot;
+                    &nbsp;<a href="/tag/python-firsts.html" class="tags">python firsts</a>
+                </div>
+            </article>
+
+            <div class="clear"></div>
+            <footer>
+                <p>
+                <a href="https://github.com/jody-frankowski/blue-penguin">Blue Penguin</a> Theme
+                &middot;
+                Powered by <a href="http://getpelican.com">Pelican</a>
+            </footer>
+        </div>
+        <div class="clear"></div>
+    </div>
+
+        <script type="text/javascript">
+          var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+          document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+         </script>
+        <script type="text/javascript">
+          try {
+              var pageTracker = _gat._getTracker("UA-151378545-1");
+          pageTracker._trackPageview();
+          } catch(err) {}</script>
+
+</body>
+</html>
