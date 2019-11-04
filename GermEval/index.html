@@ -1211,7 +1211,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We now introduce the build feature extractor. It uses many <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html">TfidfVectorizers</a> for different n-grams (1-7 and 1-3 with German stopwords removal, and 2-3 char n-gram) to create a count matrix (Tf=&gt; Term frequency) and weight the matrix with the inverse document frequency (idf). This creates a matrix which gives high weights/values for n-grams which occur in specific documents, and penalizes words that occur often (no document specificity). A further note, we changed here from the competition the values from 2-5 used in the submitted predictions, to 1-7 which gives a plus of 0.002 f-1 micro score. The FeatureUnion construct allows us to glue every thing in a big matrix, so the sklearn-like classifier can process it in one run.</p>
+<p>We now introduce the build for the feature extractor. It uses many <a href="https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html">TfidfVectorizers</a> for different n-grams (1-7 and 1-3 with German stopwords removal, and 2-3 char n-gram) to create a count matrix (Tf=&gt; Term frequency) and weight the matrix with the inverse document frequency (idf). This creates a matrix which gives high weights/values for n-grams which occur in specific documents, and penalizes words that occur often (no document specificity). A further note, we changed here from the competition the values from 2-5 used in the submitted predictions, to 1-7 which gives a plus of 0.002 f-1 micro score. The FeatureUnion construct allows us to glue every thing in a big matrix, so the sklearn-like classifier can process it in one run.</p>
 
 </div>
 </div>
@@ -1285,7 +1285,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We create a function to nice print the results for uploading to the competition website:</p>
+<p>We create now a function to nicely print the results for uploading to the competition website:</p>
 
 </div>
 </div>
@@ -1336,7 +1336,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To the main part, first we load the data. Important here, the blurbs*.txt are in fact xml, which we load with a helper script. For that we diverge from the original data, by wrapping the content of the files with a root node. This is fixed in the data from my github directory.</p>
+<p>Let's move to the main part, first we load the data. Important here, the blurbs*.txt are in fact xml, which we load with a helper script. For that we diverge from the original data, by wrapping the content of the files with a root node. This is already fixed in the data from my github directory.</p>
 
 </div>
 </div>
@@ -1427,7 +1427,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We now initialize the classification pipeline. First the vectorizer, then a liner SVM in a one vs rest manner. This we glue together in a pipeline creating a base classifier. The pipeline ensures that the result of the vectorizer is given as input to the classifier. For subtask A we could just use this base classifier (using more ngrams would be helpful, though) and set the right y-labels. For subtask B, we call the hierarchical classifier with this as base classifier. The selection of algorithm lcn and training_strategy siblings makes that the base classifier is trained in each node so that it decides which child of the parent is likely to be predicted.</p>
+<p>We now initialize the classification pipeline. First the vectorizer, then a linear SVM in a one versus rest manner. We glue this together in a pipeline creating a base classifier. The pipeline ensures that the result of the vectorizer is given as input to the classifier. For subtask A we could use just this base classifier (using more ngrams would be helpful, though) and set the right y-labels. For subtask B, we call the hierarchical classifier with this as base classifier. The selection of algorithm lcn and training_strategy siblings makes that the base classifier is trained in each node so that it decides which child of the parent is likely to be predicted.</p>
 
 </div>
 </div>
@@ -1461,7 +1461,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To create the training and prediction is really easy:</p>
+<p>To execute the training and prediction methods is really easy:</p>
 
 </div>
 </div>
@@ -1528,7 +1528,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>However, what gave us the edge was to set a very good threshold. First, we need to post-process the predictions of the SVM-hierarchical classifier.
+<p>However, what gave us the edge over the other approaches was to set a very good threshold for turning the confidence outputs into crisp predictions. First, we need to post-process the predictions of the SVM-hierarchical classifier.
 </p>
 
 </div>
@@ -1618,7 +1618,7 @@ We discuss here the hierarchical approach (Subtask B), to solve the 343 labels p
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We can see that the f1-score is almost convex and the top is around -0.2. We can chose -0.25 because it seemed more stable on the right side of the top. Using the standard threshold at 0 would give only 0.65 instead of 0.67 (0.02 was a lot in this competition).</p>
+<p>We can see that the F1-score-curve is almost convex and the top is around -0.2. We chose -0.25 because it seemed more stable on the right side of the top. Using the standard threshold at 0 would give only 0.65 instead of 0.67 (0.02 was a lot in this competition).</p>
 
 </div>
 </div>
