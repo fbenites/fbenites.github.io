@@ -33,14 +33,38 @@
         </address>
 <p>In <a href="/category/socialmediamonitoring-datascience.html">SocialMediaMonitoring, DataScience</a>.</p>
 <p>tags: <a href="/tag/pelican.html">pelican</a> <a href="/tag/publishing.html">publishing</a> </p>
-</footer><!-- /.post-info -->      <h1>Introduction</h1>
+</footer><!-- /.post-info -->      <table>
+<tr>
+<td>
+![IBH](images/logo-ibh.png "IBH" ){ width=200;}
+</td>
+
+<td>
+![ZHAW](images/zhaw.png "ZHAW" ){ width=200;}
+</td>
+<td>
+![Spinningbytes](images/logo_spinningbytes.png "Spinningbytes" ){ width=200;}
+</td>
+</tr>
+</table>
+
+<h1>Introduction</h1>
 <p>The data analysis module of the project "DIGITAL COMMUNICATION STRATEGIES FOR THE CULTURAL SECTOR IN THE BODENSEE REGION" dealt with the question of how digitisation was actually implemented using the example of some cultural providers on Lake Constance. For this purpose, selected methods of data mining and machine learning were used to analyse samples from the Internet. In this report interesting places are marked in italics and special conclusions are underlined. </p>
-<p><img alt="Count Post Per Event" src="images/CountPostPerEvent.png" title="Counts Post Per Event" width="200;"></p>
-<p><img alt="Counts Per Language" src="images/CountPerLanguage.png  &quot;Counts Per Language&quot; =200x"> </p>
-<p><img alt="Counts Per Language without Bodensee" src="images/CountPerLanguage_without_Bodensee.png &quot;Counts Per Language without Bodensee&quot; =200x"></p>
-<p><img alt="" src="images/" title=""></p>
-<p><img alt="" src="images/.png" title=""></p>
-<p><img alt="" src="images/.png" title=""></p>
+<h1>Motivation</h1>
+<p>The presence in social media channels is an important indicator of the extent to which a cultural provider has gone digital. It shows the extent to which cultural providers are aware of their own image on the Internet and how they actively deal with it. A popular platform is Instagram. It is easier to access data from there than from Facebook or Twitter, for example, which is a great advantage.</p>
+<h1>Instagram</h1>
+<p>Instagram is a social network service specialized in images. The exchange takes place via so-called posts, which always consist of a picture and a description. Users can leave comments on each post. Every day, 500 million users visit the platform, a total of 1 billion per month. In Germany Instagram is widely used with 22 million users and we assume that this is also the case in the Bodensee region. 
+Instagram focuses on images.  This limits the possibilities of user posts, because some cultural providers do not allow to take pictures of the exhibitions/performances. On the other hand, the public relations work of the cultural provider and the experience of the visitors up to and after the exhibition/performance can be well documented. Therefore we expect that all cultural providers are well represented.</p>
+<h1>Collected data</h1>
+<p>First, a list of 210 cultural destinations and places, as well as 48 artists and 102 events relevant to the Lake Constance region was compiled. Then we implemented a software routine to search for and download relevant Instagram posts and the corresponding comments from this list. The downloaded data was then stored in a database. Thus, by the end of July 2019, a total of approximately 300,000 posts had been collected.</p>
+<h1>Analysis</h1>
+<p>We noticed that many of the posts were noise: For example, a restaurant in Porto Alegre - Brazil - is called "Mainau", so some posts contain relevant text but are not directly related to the Lake Constance region. Also Mainau is only conditionally a cultural provider but much more touristic (in total 41.246 posts were connected to Mainau). Therefore, we removed many such terms or refined the search with an additional local attribute, so that in the end 128,188 posts were used for analysis. Nevertheless, we kept one very large event, namely #bodensee, so that we can make a comparison with the Bodensee region as a whole. In the analysis, we summarize all searched terms of the list and only speak of events, if not explicitly subdivided.</p>
+<p><img alt="Count Post Per Event" src="images/CountPostPerEvent.png" title="Counts Post Per Event" width="700;"></p>
+<p><img alt="Counts Per Language" src="images/CountPerLanguage.png" title="Counts Per Language" width="700;"> </p>
+<p><img alt="Counts Per Language without Bodensee" src="images/CountPerLanguage_without_Bodensee.png" title="Counts Per Language without Bodensee" width="700;"></p>
+<p><img alt="" src="images/" title="" width="700;"></p>
+<p><img alt="" src="images/" title="" width="700;"></p>
+<p><img alt="" src="images/" title="" width="700;"></p>
     </div><!-- /.entry-content -->
 
   </article>
