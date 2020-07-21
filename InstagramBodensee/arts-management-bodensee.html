@@ -28,8 +28,7 @@
         </abbr>
 
         <address class="vcard author">
-                By                         <a class="url fn" href="/author/fernando-benites.html">Fernando Benites</a>
-                        <a class="url fn" href="/author/mark-cieliebak.html">Mark Cieliebak</a>
+                By                         <a class="url fn" href="/author/fernando-benites-and-mark-cieliebak.html">Fernando Benites and Mark Cieliebak</a>
         </address>
 <p>In <a href="/category/socialmediamonitoring-datascience.html">SocialMediaMonitoring, DataScience</a>.</p>
 <p>tags: <a href="/tag/pelican.html">pelican</a> <a href="/tag/publishing.html">publishing</a> </p>
@@ -48,25 +47,134 @@
 </tr>
 </table>
 
-<h1>Introduction</h1>
-<p>We concluded an interesting interdisciplinary project on digitalization where we performed some basic data science (web scraping, elastic search/kibana juggling, counting). I would like to share some results on this blog.</p>
-<p>The project was called "DIGITAL COMMUNICATION STRATEGIES FOR THE CULTURAL SECTOR IN THE BODENSEE REGION" and the data analysis module  dealt with the question of how digitisation was actually implemented using the example of some cultural providers on Lake Constance. </p>
-<h1>Motivation</h1>
-<p>The presence in social media channels is an important indicator of the extent to which a cultural provider has gone digital. It shows the extent to which cultural providers are aware of their own image on the Internet and how they actively deal with it. A popular platform is Instagram. It is easier to access data from there than from Facebook or Twitter, for example, which is a great advantage. Also data privacy is less concerning here since people know that it will be shared. We also gathered data which was only available without access restriction and will not share it. We use in this article interchangeably Lake of Constance region and Bodensee region.</p>
-<h1>Instagram</h1>
-<p>Instagram is a social network service specialized in images. The exchange takes place via so-called posts, which always consist of a picture and a description. Users can leave comments on each post. Every day, 500 million users visit the platform, a total of 1 billion per month. In Germany Instagram is widely used with 22 million users and we assume that this is also the case in the Bodensee region. 
-Instagram focuses on images.  This limits the possibilities of user posts, because some cultural providers do not allow to take pictures of the exhibitions/performances. On the other hand, the public relations work of the cultural provider and the experience of the visitors up to and after the exhibition/performance can be well documented. Therefore, we expect that  all selected cultural providers are well represented.</p>
-<h1>Collected data</h1>
-<p>First, a list of 210 cultural destinations and places, as well as 48 artists and 102 events relevant to the Lake Constance region was compiled. Then we implemented a software routine to search for and download relevant Instagram posts and the corresponding comments from this list. The downloaded data was then stored in a database. Thus, by the end of July 2019, a total of approximately 300,000 posts had been collected.</p>
-<h1>Analysis</h1>
-<p>We noticed that many of the posts were noise: For example, a restaurant in Porto Alegre - Brazil - is called "Mainau", so some posts contain relevant text but are not directly related to the Lake Constance region. Also Mainau is only conditionally a cultural provider but much more touristic (in total 41.246 posts were connected to Mainau). Therefore, we removed many such terms or refined the search with an additional local attribute, so that in the end 128,188 posts were used for analysis. Nevertheless, we kept one very large event, namely #bodensee, so that we can make a comparison with the Bodensee region as a whole. In the analysis, we summarize all searched terms of the list and only speak of events, if not explicitly subdivided.</p>
+<h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
+<p>We concluded an interesting interdisciplinary project on
+digitalization where we performed some basic data science (web
+scraping, elastic search/kibana juggling, counting). I would like to
+share some results on this blog.</p>
+<p>The project was called &ldquo;DIGITAL COMMUNICATION STRATEGIES FOR THE
+CULTURAL SECTOR IN THE BODENSEE REGION&rdquo; and the data analysis module
+dealt with the question of how digitisation was actually implemented
+using the example of some cultural providers on the region of the Lake
+Constance. We use in this article interchangeably Lake of
+Constance region and Bodensee region.</p>
+<h1 id="motivation">Motivation<a class="headerlink" href="#motivation" title="Permanent link">&para;</a></h1>
+<p>The presence in social media channels is an important indicator of the
+extent to which a cultural provider has gone digital. It shows how
+aware they are of their own image on the
+Internet and how they actively deal with it. A popular social media platform is
+Instagram. It is easier to access data from there than from Facebook
+or Twitter, for example, which is a great advantage. Also data privacy
+is less concerning here since people know that it will be shared. We
+also gathered data which was only available without access restriction
+and will not share it.</p>
+<h1 id="instagram">Instagram<a class="headerlink" href="#instagram" title="Permanent link">&para;</a></h1>
+<p>Instagram is a social network service specialized in images. The
+exchange takes place via so-called posts, which always consist of a
+picture and a description. Users can leave comments on each
+post. Every day, 500 million users visit the platform, a total of 1
+billion per month, as
+<a href="https://www.omnicoreagency.com/instagram-statistics/">this link</a>
+shows. In Germany Instagram is widely used with around <a href="https://www.statista.com/statistics/1021975/instagram-users-germany/">20 million
+users</a>
+and we assume that this is also the case in the Bodensee region.</p>
+<p>As pointed out earlier, Instagram focuses on images.  This limits the possibilities of user
+posts, because some cultural providers do not allow to take pictures
+of the exhibitions/performances. On the other hand, the public
+relations work of the cultural provider and the experience of the
+visitors up to and after the exhibition/performance can be well
+documented. Therefore, we expect that  all selected cultural providers
+are well represented.</p>
+<h1 id="collected-data">Collected data<a class="headerlink" href="#collected-data" title="Permanent link">&para;</a></h1>
+<p>First, a list of 210 cultural destinations and places, as well as 48
+artists and 102 events relevant to the Lake Constance region was
+compiled. Then we implemented a software routine to search for and
+download relevant Instagram posts and the corresponding comments from
+this list. The downloaded data was then stored in a database. Thus, by
+the end of July 2019, a total of approximately 300,000 posts had been
+collected.</p>
+<h1 id="analysis">Analysis<a class="headerlink" href="#analysis" title="Permanent link">&para;</a></h1>
+<p>We noticed that many of the posts were noise: For example, a
+restaurant in Porto Alegre - Brazil - is called &ldquo;Mainau&rdquo;, so some
+posts contain relevant text but are not directly related to the Lake
+Constance region. Also Mainau is only conditionally a cultural
+provider but much more touristic (in total 41.246 posts were connected
+to Mainau). Therefore, we removed many such terms or refined the
+search with an additional local attribute, so that in the end 128,188
+posts were used for analysis. Nevertheless, we kept one very large
+event, namely #bodensee, so that we can make a comparison with the
+Bodensee region as a whole. Unfortunately, #bodensee has more than 1
+million post, so we took predominantely the months of June and July
+2019 and only a very few samples (around 600 posts) from before that
+dates. This is the reason why we will only discuss timelines relating
+to the culture providers. Especially, in #bodensee we expect a high
+bias towards summer related events/topics.
+In the analysis, we summarize all searched
+terms of the list and only speak of searched events, if not explicitly
+subdivided.</p>
+<h1 id="number-of-posts-per-event">Number of Posts per Event<a class="headerlink" href="#number-of-posts-per-event" title="Permanent link">&para;</a></h1>
 <p><img alt="Count Post Per Event" src="images/CountPostPerEvent.png" title="Counts Post Per Event" width="700;"></p>
-<p><img alt="Counts Per Language" src="images/CountPerLanguage.png" title="Counts Per Language" width="700;"> </p>
+<p>The picture above shows the distribution of posts per event. #bodensee has
+73,109 posts and takes the first place, the Bregenz Festival comes
+second with 10,558 posts. From this it can be seen that the Bregenz
+Festival seeks or gets a lot of publicity and spread, much more than
+the other searched events. We will come back to this phenomenon
+later to discuss it in
+more detail. It is also important to mention that the remaining
+cultural providers hardly stand out from the others in terms of the
+number of posts. Although there was not much more than two months of
+posts collected there is a lot more of posts about #bodensee.</p>
+<p><img alt="Counts Per Language" src="images/CountPerLanguage.png" title="Counts Per Language" width="700;"></p>
 <p><img alt="Counts Per Language without Bodensee" src="images/CountPerLanguage_without_Bodensee.png" title="Counts Per Language without Bodensee" width="700;"></p>
-<p><img alt="" src="images/" title="" width="700;"></p>
-<p><img alt="" src="images/" title="" width="700;"></p>
-<p><img alt="" src="images/" title="" width="700;"></p>
-<h1>Conclusion</h1>
+<p><img alt="Distribution of posts over the world" src="images/world_distribution.png" title="Distribution of posts over the world" width="700;"></p>
+<p><img alt="Distribution of posts over the Lake of Constance" src="images/dist_region.png" title="Distribution of posts over the Lake of Constance" width="700;"></p>
+<p><img alt="Bregenz Festspiele post count over time" src="images/BregenzTime.png" title="Bregenz Festspiele post count over Time" width="700;"></p>
+<p>Bregenz Festival is one of the main attractions of the Lake Constance
+region. As shown earlier, it is also very present in Instagram with
+over 10,000 posts. The distribution of the posts over time shows that
+those in the summer have a peak and double every year, with Instagram
+users increasing more linearly (additional 100 million every year:
+https://www.statista.com/statistics/253577/number-of-monthly-active-instagram-users/
+).
+We also see an increased &ldquo;activity&rdquo; in March 2018 and 2019, probably
+when the target audience starts to organize the summer holidays. We
+see the most used words above. It is also interesting to see that we
+started with German words, but we see many English terms. Here, in
+such a touristic area, the question also arises whether a translation
+of the terms would be interesting, e.g. lake Constance/lac de
+Constance, to better capture their opinions.</p>
+<style>
+table{
+    border-collapse: collapse;
+    border-spacing: 0;
+    border:0px solid ;
+
+}
+
+th {
+border: 1px solid #ddd;
+padding: 8px;
+}
+</style>
+
+<div class="tableFormatted">
+
+<table border="2">
+<thead>
+<tr>
+<th> Year </th><th>   Terms </th></tr>
+<tr>
+<th>2017   </th><th>  seebühnebregenz; nice; bühne; bodenseevorarlberg; style; instadaily; evazellhofer; feldkirch; dornbirn; instagram; sagmeister_women; fashion; wow; premiere; beautiful; see; sunset; visitvorarlberg; openair; instagood; music; travel; summer; bregenzerfestspiele2017; amazing; love; 2017; bühnenbild; bregenzfestival; art; lakeofconstance; visitbregenz; georgesbizet; österreich; bizet; lakeconstance; stage; festival; bregenzer; lake; oper; festspiele; vorarlberg; seebühne; austria; opera; bodensee; carmen; bregenz; bregenzerfestspiele </th></tr>
+<tr>
+<th> Δ2018 </th><th> danke; thank; carmenopera; mal; culture; rezasartipizade; de; great; happy; festspielhaus; sommer; 2018; bodenseeliebe; schön; abend </th></tr>
+<tr>
+<th> Δ2019 </th><th>  bodenseespargel; erdbeeren; obstambodensee; birne; verdi; bregenzerwald; obstundgemüse; banane; kiwi; rigoletto; kirschen; bodenseeobst; obstvombodensee; kirsche; aprikosen; spargel; clown; kartoffeln; dornbirn; markt; 2019; zitrone; wochenmarkt; kornmarktplatz; apfel; roteshausdornbirn; gemüse; marillen; obst; giuseppeverdi </th></tr>
+</table>
+</div>
+
+<h1 id="number-of-posts-per-user">Number of Posts per User<a class="headerlink" href="#number-of-posts-per-user" title="Permanent link">&para;</a></h1>
+<h1 id="geo-location">Geo-Location<a class="headerlink" href="#geo-location" title="Permanent link">&para;</a></h1>
+<h1 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h1>
 <p>Checkout our project in :
 <a href="https://www.researchgate.net/project/Digital-Transformation-in-the-Cultural-and-Creative-Industries"> Digital Transformation in the Cultural and Creative Industries </a></p>
 <script type="text/javascript">
